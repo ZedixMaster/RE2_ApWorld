@@ -1,0 +1,31 @@
+SystemID PSX
+0CC948	b	u	0	MainRAM	Stage (0-6)
+0CC94A	b	u	0	MainRAM	Room (destination; changes when door is triggered)
+0CC35C	b	u	0	MainRAM	Loaded Room
+0C646C	w	h	0	MainRAM	Door/Load State; 000C during a door transition
+0CC35D	b	h	0	MainRAM	Last item picked up
+0C7CE4	b	b	0	MainRAM	System flags; 0100 0000 = Normal
+0C7D07	b	b	0	MainRAM	Scenario flags; 0000 0000 = Leon A
+0CCA24	w	h	0	MainRAM	AP received-item index
+0CCB68	d	h	0	MainRAM	Inventory slot 1
+0CCB6C	d	h	0	MainRAM	Inventory slot 2
+0CCB70	d	h	0	MainRAM	Inventory slot 3
+0CCB74	d	h	0	MainRAM	Inventory slot 4
+0CCB78	d	h	0	MainRAM	Inventory slot 5
+0CCB7C	d	h	0	MainRAM	Inventory slot 6
+0CCB80	d	h	0	MainRAM	Inventory slot 7
+0CCB84	d	h	0	MainRAM	Inventory slot 8
+0CCB88	d	h	0	MainRAM	Side pack slot 9
+0CCB8C	d	h	0	MainRAM	Side pack slot 10
+0CCB90	d	h	0	MainRAM	Lighter slot
+0CC9E8	d	h	0	MainRAM	Early flags, gids 0-31 (stages 0-3)
+0CC9EC	d	h	0	MainRAM	Early flags, gids 32-63
+0CC9F0	d	h	0	MainRAM	Early flags, gids 64-95
+0CC9F4	d	h	0	MainRAM	Early flags, gids 96-127
+0CC9F8	d	h	0	MainRAM	Early flags, gids 128-159
+0CC9FC	d	h	0	MainRAM	Early flags, gids 160-191
+0CCA00	d	h	0	MainRAM	Early flags, gids 192-223
+0CCA04	d	h	0	MainRAM	Early flags, gids 224-255
+0CCA08	d	h	0	MainRAM	Late flags, gids 0-31 (stages 4-6)
+0CCA0C	d	h	0	MainRAM	Late flags, gids 32-63
+0CCA10	d	h	0	MainRAM	Late flags, gids 64-95
