@@ -39,9 +39,12 @@ NATIVE_ITEM_NAMES = {
     0x60: "MO Disk", 0x61: "Umbrella Key Card", 0x62: "Master Key", 0x63: "Platform Key",
 }
 
-WEAPONS_AND_UPGRADES = set(range(0x01, 0x14)) | {0x1F, 0x20, 0x21, 0x22}
+WEAPONS_AND_UPGRADES = set(range(0x01, 0x14)) | {0x20, 0x21, 0x22}
 FIRST_KEY_ITEM       = 0x2F
-NOT_PROGRESSION      = {0x31, 0x52, 0x57}
+SMALL_KEY            = 0x1F  # opens the Lounge desk
+
+# Photos, G-Virus, Films (they only develop into files), Special Key (costume locker), Cord (optional shutters)
+NOT_PROGRESSION      = {0x31, 0x52, 0x57, 0x44, 0x45, 0x46, 0x50, 0x53, 0x56}
 
 FILLER_ITEM_NAME     = "Green Herb"
 
@@ -61,7 +64,7 @@ ITEM_NAME_TO_ID = {item_name(*item): item_id(*item) for item in VANILLA_ITEMS}
 
 
 def classification(native_id: int) -> ItemClassification:
-    if native_id >= FIRST_KEY_ITEM and native_id not in NOT_PROGRESSION:
+    if native_id == SMALL_KEY or (native_id >= FIRST_KEY_ITEM and native_id not in NOT_PROGRESSION):
         return ItemClassification.progression
     if native_id in WEAPONS_AND_UPGRADES:
         return ItemClassification.useful

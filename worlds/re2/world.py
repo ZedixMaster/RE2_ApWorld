@@ -1,6 +1,6 @@
 from worlds.AutoWorld import World
 
-from . import items, locations, regions, web_world
+from . import items, locations, regions, rules, web_world
 from . import options as re2_options
 
 
@@ -16,7 +16,7 @@ class RE2World(World):
 
     location_name_to_id = locations.LOCATION_NAME_TO_ID
     item_name_to_id     = items.ITEM_NAME_TO_ID
-    origin_region_name  = "Leon A"
+    origin_region_name  = "City"
 
     def create_regions(self) -> None:
         regions.create_all_regions(self)
@@ -32,4 +32,4 @@ class RE2World(World):
         return items.FILLER_ITEM_NAME
 
     def set_rules(self) -> None:
-        self.multiworld.completion_condition[self.player] = lambda state: state.has("Victory", self.player)
+        rules.set_all_rules(self)

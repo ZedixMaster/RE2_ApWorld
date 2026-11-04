@@ -66,17 +66,6 @@
     "amount": 1
   },
   {
-    "name": "R.P.D. Backyard - Cabin Key",
-    "file": "ROOM1050.RDT",
-    "stage": 0,
-    "room": 5,
-    "aot_id": 2,
-    "global_id": 4,
-    "flag_index": 4,
-    "item_id": 88,
-    "amount": 1
-  },
-  {
     "name": "Outside Shed - Ink Ribbon",
     "file": "ROOM1060.RDT",
     "stage": 0,
@@ -196,28 +185,6 @@
     "flag_index": 210,
     "item_id": 20,
     "amount": 15
-  },
-  {
-    "name": "Stuffed Tiger Corridor - Magnum Rounds",
-    "file": "ROOM10D0.RDT",
-    "stage": 0,
-    "room": 13,
-    "aot_id": 10,
-    "global_id": 206,
-    "flag_index": 206,
-    "item_id": 22,
-    "amount": 8
-  },
-  {
-    "name": "Taxidermy Display Room - Crank",
-    "file": "ROOM10E0.RDT",
-    "stage": 0,
-    "room": 14,
-    "aot_id": 4,
-    "global_id": 106,
-    "flag_index": 106,
-    "item_id": 67,
-    "amount": 1
   },
   {
     "name": "Waiting Room 2F - Ink Ribbon",
@@ -1012,17 +979,6 @@
     "amount": 1
   },
   {
-    "name": "Chief Irons' Office - Handgun Bullets",
-    "file": "ROOM21B0.RDT",
-    "stage": 1,
-    "room": 27,
-    "aot_id": 5,
-    "global_id": 2,
-    "flag_index": 2,
-    "item_id": 20,
-    "amount": 15
-  },
-  {
     "name": "Cells - Manhole Opener",
     "file": "ROOM3010.RDT",
     "stage": 2,
@@ -1119,83 +1075,6 @@
     "global_id": 134,
     "flag_index": 134,
     "item_id": 40,
-    "amount": 1
-  },
-  {
-    "name": "Control Room 1 / Warehouse 1 - Ink Ribbon",
-    "file": "ROOM4010.RDT",
-    "stage": 3,
-    "room": 1,
-    "aot_id": 9,
-    "global_id": 128,
-    "flag_index": 128,
-    "item_id": 30,
-    "amount": 3
-  },
-  {
-    "name": "Control Room 1 / Warehouse 1 - Handgun Bullets",
-    "file": "ROOM4010.RDT",
-    "stage": 3,
-    "room": 1,
-    "aot_id": 12,
-    "global_id": 130,
-    "flag_index": 130,
-    "item_id": 20,
-    "amount": 15
-  },
-  {
-    "name": "Control Room 1 / Warehouse 1 - Shotgun Shells",
-    "file": "ROOM4010.RDT",
-    "stage": 3,
-    "room": 1,
-    "aot_id": 13,
-    "global_id": 131,
-    "flag_index": 131,
-    "item_id": 21,
-    "amount": 7
-  },
-  {
-    "name": "Control Room 1 / Warehouse 1 - Magnum Rounds",
-    "file": "ROOM4010.RDT",
-    "stage": 3,
-    "room": 1,
-    "aot_id": 14,
-    "global_id": 169,
-    "flag_index": 169,
-    "item_id": 22,
-    "amount": 8
-  },
-  {
-    "name": "Control Room 1 / Warehouse 1 - Green Herb 1",
-    "file": "ROOM4010.RDT",
-    "stage": 3,
-    "room": 1,
-    "aot_id": 15,
-    "global_id": 178,
-    "flag_index": 178,
-    "item_id": 38,
-    "amount": 1
-  },
-  {
-    "name": "Control Room 1 / Warehouse 1 - Green Herb 2",
-    "file": "ROOM4010.RDT",
-    "stage": 3,
-    "room": 1,
-    "aot_id": 16,
-    "global_id": 179,
-    "flag_index": 179,
-    "item_id": 38,
-    "amount": 1
-  },
-  {
-    "name": "Control Room 1 / Warehouse 1 - Green Herb 3",
-    "file": "ROOM4010.RDT",
-    "stage": 3,
-    "room": 1,
-    "aot_id": 17,
-    "global_id": 168,
-    "flag_index": 168,
-    "item_id": 38,
     "amount": 1
   },
   {
@@ -1507,28 +1386,6 @@
     "amount": 8
   },
   {
-    "name": "Hydrolic Monitor Room - Up Key",
-    "file": "ROOM5070.RDT",
-    "stage": 4,
-    "room": 7,
-    "aot_id": 2,
-    "global_id": 9,
-    "flag_index": 265,
-    "item_id": 94,
-    "amount": 1
-  },
-  {
-    "name": "Hydrolic Monitor Room - Shotgun Shells",
-    "file": "ROOM5070.RDT",
-    "stage": 4,
-    "room": 7,
-    "aot_id": 4,
-    "global_id": 76,
-    "flag_index": 332,
-    "item_id": 21,
-    "amount": 7
-  },
-  {
     "name": "Factory Tunnel 2 - Green Herb 1",
     "file": "ROOM5080.RDT",
     "stage": 4,
@@ -1582,17 +1439,6 @@
     "flag_index": 315,
     "item_id": 21,
     "amount": 7
-  },
-  {
-    "name": "Power Room - Master Key",
-    "file": "ROOM6040.RDT",
-    "stage": 5,
-    "room": 4,
-    "aot_id": 3,
-    "global_id": 20,
-    "flag_index": 276,
-    "item_id": 98,
-    "amount": 2
   },
   {
     "name": "Security Room - Ink Ribbon",
@@ -1856,61 +1702,6 @@
     "global_id": 81,
     "flag_index": 337,
     "item_id": 38,
-    "amount": 1
-  },
-  {
-    "name": "Main Platform - Joint Plug (Blue)",
-    "file": "ROOM7010.RDT",
-    "stage": 6,
-    "room": 1,
-    "aot_id": 4,
-    "global_id": 34,
-    "flag_index": 290,
-    "item_id": 84,
-    "amount": 1
-  },
-  {
-    "name": "Main Platform - Joint Plug (Red)",
-    "file": "ROOM7010.RDT",
-    "stage": 6,
-    "room": 1,
-    "aot_id": 5,
-    "global_id": 39,
-    "flag_index": 295,
-    "item_id": 85,
-    "amount": 1
-  },
-  {
-    "name": "Power Control Platform - Rocket Launcher",
-    "file": "ROOM7020.RDT",
-    "stage": 6,
-    "room": 2,
-    "aot_id": 5,
-    "global_id": 40,
-    "flag_index": 296,
-    "item_id": 17,
-    "amount": 2
-  },
-  {
-    "name": "Train Rear Carriage - Ink Ribbon",
-    "file": "ROOM7040.RDT",
-    "stage": 6,
-    "room": 4,
-    "aot_id": 2,
-    "global_id": 78,
-    "flag_index": 334,
-    "item_id": 30,
-    "amount": 3
-  },
-  {
-    "name": "Train Rear Carriage - Platform Key",
-    "file": "ROOM7040.RDT",
-    "stage": 6,
-    "room": 4,
-    "aot_id": 3,
-    "global_id": 79,
-    "flag_index": 335,
-    "item_id": 99,
     "amount": 1
   }
 ]

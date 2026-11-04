@@ -63,6 +63,23 @@ REVIEW_DECISIONS = {
     ("ROOM7040.RDT", 3):  (0x63, 1, 79),
 }
 
+# Rooms Leon A never enters, keyed by (stage, room). Their item scripts are unconditional, so the flags can't drop them.
+# Evidence is in leon_a_locks.md (door graph, Evil Resource, cvxfreak's walkthrough).
+UNREACHABLE_ROOMS = {
+    (0, 0x05): "R.P.D. Backyard: only reachable from East Street, the B start",
+    (0, 0x0D): "Stuffed Tiger Corridor: only reachable through the Chief's office",
+    (0, 0x0E): "Taxidermy Display Room: only reachable through the Chief's office",
+    (1, 0x1B): "Chief Irons' Office: blocked door in Leon A",
+    (3, 0x01): "Control Room 1 / Warehouse 1: the 'T' Corridor door leads here only for Claire",
+    (4, 0x06): "Turntable Yard (Turntable Lowered): B only",
+    (4, 0x07): "Hydrolic Monitor Room: B only",
+    (5, 0x04): "Power Room: needs the Power Room Key, B only",
+    (6, 0x01): "Main Platform: needs the Platform Key, B only",
+    (6, 0x02): "Power Control Platform: past the Main Platform",
+    (6, 0x03): "Train Front Carriage: B ending",
+    (6, 0x04): "Train Rear Carriage: B only",
+}
+
 
 def load_rows(csv_path):
     with open(csv_path, newline="") as source:
@@ -168,6 +185,15 @@ def stage_and_room(file):
     return int(file[4], 16) - 1, int(file[5:7], 16)
 
 
+def drop_unreachable(chosen):
+    dropped = {key for key in chosen if stage_and_room(key[0]) in UNREACHABLE_ROOMS}
+    for file, aot_id in sorted(dropped):
+        stage, room = stage_and_room(file)
+        print(f"  UNREACHABLE {file} aot {aot_id}: {UNREACHABLE_ROOMS[(stage, room)]}")
+
+    return {key: variant for key, variant in chosen.items() if key not in dropped}
+
+
 def flag_index(stage, global_id):
     return global_id + (LATE_STAGE_OFFSET if stage >= FIRST_LATE_STAGE else 0)
 
@@ -232,7 +258,7 @@ def main():
 
     known_flags = {**LEON_A_FLAGS, **dict(parse_flag(text) for text in args.flag)}
     included, review, _excluded = resolve(group_spots(load_rows(args.csv_path)), known_flags)
-    locations = build_locations(apply_decisions(included, review))
+    locations = build_locations(drop_unreachable(apply_decisions(included, review)))
     report_shared_flags(locations)
     if args.output:
         write_locations(locations, args.output)
