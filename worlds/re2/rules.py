@@ -2,7 +2,11 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING
 
-from worlds.generic.Rules import set_rule
+from worlds.generic.Rules import set_rule, add_item_rule
+
+AFTER_TURNTABLE_REGIONS = ("Laboratory", "Laboratory B5", "Computer Room", "Active Treatment Room", "Cargo Room", "Gate Platform")
+
+AFTER_TURNTABLE_KEYS = ("Main Fuse", "Fuse Case", "Umbrella Key Card x2", "MO Disk", "Weapon Storage Key")
 
 if TYPE_CHECKING:
     from .world import RE2World
@@ -25,3 +29,11 @@ def set_all_rules(world: RE2World) -> None:
                  lambda state, counts=item_counts: state.has_all_counts(counts, world.player))
 
     world.multiworld.completion_condition[world.player] = lambda state: state.has("Victory", world.player)
+
+    for region_name in AFTER_TURNTABLE_REGIONS:
+        for location in world.get_region(region_name).locations:
+            add_item_rule(location, lambda item: allowed_after_turntable(item, world.player))
+
+
+def allowed_after_turntable(item, player: int) -> bool:
+    return item.player != player or not item.advancement or item.name in AFTER_TURNTABLE_KEYS

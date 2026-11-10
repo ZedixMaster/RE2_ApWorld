@@ -90,3 +90,10 @@ class TestGoal(RE2TestBase):
         for item in ("Umbrella Key Card x2", "MO Disk", "Main Fuse", "Down Key", "Manhole Opener", "Heart Key"):
             with self.subTest(item=item):
                 self.assertFalse(self.multiworld.can_beat_game(self.state_without(item)))
+
+
+class TestTurntable(RE2TestBase):
+    def test_lab_refuses_pre_turntable_keys(self):
+        location = self.multiworld.get_location("Security Room - Shotgun Shells", self.player)
+        self.assertFalse(location.item_rule(self.get_item_by_name("Valve Handle")))
+        self.assertTrue(location.item_rule(self.get_item_by_name("Main Fuse")))
