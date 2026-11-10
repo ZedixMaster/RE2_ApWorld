@@ -1397,39 +1397,6 @@
     "amount": 1
   },
   {
-    "name": "Steam Room - Ink Ribbon",
-    "file": "ROOM6030.RDT",
-    "stage": 5,
-    "room": 3,
-    "aot_id": 13,
-    "global_id": 58,
-    "flag_index": 314,
-    "item_id": 30,
-    "amount": 3
-  },
-  {
-    "name": "Steam Room - Green Herb",
-    "file": "ROOM6030.RDT",
-    "stage": 5,
-    "room": 3,
-    "aot_id": 15,
-    "global_id": 57,
-    "flag_index": 313,
-    "item_id": 38,
-    "amount": 1
-  },
-  {
-    "name": "Steam Room - Shotgun Shells",
-    "file": "ROOM6030.RDT",
-    "stage": 5,
-    "room": 3,
-    "aot_id": 17,
-    "global_id": 59,
-    "flag_index": 315,
-    "item_id": 21,
-    "amount": 7
-  },
-  {
     "name": "Security Room - Ink Ribbon",
     "file": "ROOM6070.RDT",
     "stage": 5,
