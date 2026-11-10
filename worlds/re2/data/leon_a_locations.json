@@ -561,17 +561,6 @@
     "amount": 15
   },
   {
-    "name": "Dark Room - Film D",
-    "file": "ROOM2080.RDT",
-    "stage": 1,
-    "room": 8,
-    "aot_id": 14,
-    "global_id": 159,
-    "flag_index": 159,
-    "item_id": 80,
-    "amount": 1
-  },
-  {
     "name": "Dark Room - Ink Ribbon",
     "file": "ROOM2080.RDT",
     "stage": 1,
@@ -1584,18 +1573,18 @@
     "amount": 1
   },
   {
-    "name": "Culture Experiment Room - Sub Machinegun",
+    "name": "Culture Experiment Room - Machinegun Bullets",
     "file": "ROOM60F0.RDT",
     "stage": 5,
     "room": 15,
     "aot_id": 2,
     "global_id": 30,
     "flag_index": 286,
-    "item_id": 15,
+    "item_id": 27,
     "amount": 100,
     "alternate_items": [
       [
-        27,
+        15,
         100
       ]
     ]

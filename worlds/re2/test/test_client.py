@@ -3,7 +3,7 @@ import unittest
 from ..catalog import LEON_A_LOCATIONS
 from ..client import EMPTY_RECORD, INVENTORY_SLOTS, find_any_vanilla_slot
 
-LAB_SMG = next(location for location in LEON_A_LOCATIONS if location["name"] == "Culture Experiment Room - Sub Machinegun")
+LAB_SMG = next(location for location in LEON_A_LOCATIONS if location["name"] == "Culture Experiment Room - Machinegun Bullets")
 
 
 def inventory_with(first_slot: bytes) -> bytes:

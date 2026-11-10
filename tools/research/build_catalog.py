@@ -58,14 +58,15 @@ REVIEW_DECISIONS = {
     ("ROOM5060.RDT", 2):  None,
     ("ROOM5070.RDT", 4):  (0x15, 7, 76),
     ("ROOM60C0.RDT", 7):  None,
-    ("ROOM60F0.RDT", 2):  (0x0F, 100, 30),
+    ("ROOM60F0.RDT", 2):  (0x1B, 100, 30),
     ("ROOM7040.RDT", 2):  (0x1E, 3, 78),
     ("ROOM7040.RDT", 3):  (0x63, 1, 79),
+    ("ROOM2080.RDT", 14): None
 }
 
 
 ALTERNATE_ITEMS = {
-    ("ROOM60F0.RDT", 2): [(0x1B, 100)]
+    ("ROOM60F0.RDT", 2): [(0x0F, 100)]
 }
 
 
