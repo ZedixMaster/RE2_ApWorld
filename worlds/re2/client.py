@@ -76,6 +76,19 @@ def find_vanilla_slot(before: bytes, after: bytes, native_id: int, amount: int) 
     return None
 
 
+def vanilla_items(location: dict) -> list[tuple[int, int]]:
+    return [(location["item_id"], location["amount"]), *map(tuple, location.get("alternate_items", []))]
+
+
+def find_any_vanilla_slot(before: bytes, after: bytes, location: dict) -> int | None:
+    for native_id, amount in vanilla_items(location):
+        slot = find_vanilla_slot(before, after, native_id, amount)
+        if slot is not None:
+            return slot
+
+    return None
+
+
 class RE2Client(BizHawkClient):
     game         = "Resident Evil 2"
     system       = "PSX"
@@ -194,7 +207,7 @@ class RE2Client(BizHawkClient):
             if (location["stage"], location["room"]) != current_room:
                 continue
 
-            slot = find_vanilla_slot(self.previous_inventory, inventory, location["item_id"], location["amount"])
+            slot = find_any_vanilla_slot(self.previous_inventory, inventory, location)
             if slot is None:
                 continue
 

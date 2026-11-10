@@ -41,7 +41,7 @@ LEON_A_FLAGS = {(1, 0): 0, (1, 1): 0}
 FIRST_LATE_STAGE  = 4
 LATE_STAGE_OFFSET = 256
 
-# Spots the flags alone can't settle. Value = (item_type, amount, global_id), or None to leave the spot out.
+
 REVIEW_DECISIONS = {
     ("ROOM10D0.RDT", 10): (0x16, 8, 206),
     ("ROOM1150.RDT", 7):  None,
@@ -55,7 +55,7 @@ REVIEW_DECISIONS = {
     ("ROOM40E0.RDT", 7):  (0x15, 7, 202),
     ("ROOM40E0.RDT", 8):  (0x14, 15, 203),
     ("ROOM4100.RDT", 6):  (0x23, 1, 180),
-    ("ROOM5060.RDT", 2):  None,  # Same pickup as ROOM5040 aot 2: the platform with the turntable down
+    ("ROOM5060.RDT", 2):  None,
     ("ROOM5070.RDT", 4):  (0x15, 7, 76),
     ("ROOM60C0.RDT", 7):  None,
     ("ROOM60F0.RDT", 2):  (0x0F, 100, 30),
@@ -63,8 +63,12 @@ REVIEW_DECISIONS = {
     ("ROOM7040.RDT", 3):  (0x63, 1, 79),
 }
 
-# Rooms Leon A never enters, keyed by (stage, room). Their item scripts are unconditional, so the flags can't drop them.
-# Evidence is in leon_a_locks.md (door graph, Evil Resource, cvxfreak's walkthrough).
+
+ALTERNATE_ITEMS = {
+    ("ROOM60F0.RDT", 2): [(0x1B, 100)]
+}
+
+
 UNREACHABLE_ROOMS = {
     (0, 0x05): "R.P.D. Backyard: only reachable from East Street, the B start",
     (0, 0x0D): "Stuffed Tiger Corridor: only reachable through the Chief's office",
@@ -216,11 +220,16 @@ def build_locations(chosen):
     locations = []
     for (file, aot_id), (item_type, amount, global_id) in sorted(chosen.items()):
         stage, room = stage_and_room(file)
-        locations.append({
+        location = {
             "name": f"{room_name(stage, room)} - {ITEM_NAMES[item_type]}",
             "file": file, "stage": stage, "room": room, "aot_id": aot_id,
             "global_id": global_id, "flag_index": flag_index(stage, global_id), "item_id": item_type, "amount": amount,
-        })
+        }
+
+        if (file, aot_id) in ALTERNATE_ITEMS:
+            location["alternate_items"] = ALTERNATE_ITEMS[(file, aot_id)]
+
+        locations.append(location)
 
     number_duplicate_names(locations)
     return locations

@@ -1592,7 +1592,13 @@
     "global_id": 30,
     "flag_index": 286,
     "item_id": 15,
-    "amount": 100
+    "amount": 100,
+    "alternate_items": [
+      [
+        27,
+        100
+      ]
+    ]
   },
   {
     "name": "Active Treatment Experimentation Room - Magnum Rounds",
