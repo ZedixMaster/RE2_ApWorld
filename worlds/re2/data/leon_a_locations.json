@@ -671,17 +671,6 @@
     "amount": 1
   },
   {
-    "name": "Interrogation Corridor - Shotgun Shells",
-    "file": "ROOM20C0.RDT",
-    "stage": 1,
-    "room": 12,
-    "aot_id": 10,
-    "global_id": 207,
-    "flag_index": 207,
-    "item_id": 21,
-    "amount": 7
-  },
-  {
     "name": "Press Room - Cog",
     "file": "ROOM20D0.RDT",
     "stage": 1,
@@ -713,17 +702,6 @@
     "flag_index": 215,
     "item_id": 35,
     "amount": 1
-  },
-  {
-    "name": "Press Room - Handgun Bullets",
-    "file": "ROOM20D0.RDT",
-    "stage": 1,
-    "room": 13,
-    "aot_id": 20,
-    "global_id": 208,
-    "flag_index": 208,
-    "item_id": 20,
-    "amount": 30
   },
   {
     "name": "Interrogation Room / Observation Room - Rook Plug",
@@ -1243,29 +1221,7 @@
     "amount": 15
   },
   {
-    "name": "Dumping Area - Ink Ribbon 1",
-    "file": "ROOM4100.RDT",
-    "stage": 3,
-    "room": 16,
-    "aot_id": 4,
-    "global_id": 255,
-    "flag_index": 255,
-    "item_id": 30,
-    "amount": 3
-  },
-  {
-    "name": "Dumping Area - First Aid Spray",
-    "file": "ROOM4100.RDT",
-    "stage": 3,
-    "room": 16,
-    "aot_id": 6,
-    "global_id": 180,
-    "flag_index": 180,
-    "item_id": 35,
-    "amount": 1
-  },
-  {
-    "name": "Dumping Area - Ink Ribbon 2",
+    "name": "Dumping Area - Ink Ribbon",
     "file": "ROOM4100.RDT",
     "stage": 3,
     "room": 16,
@@ -1538,23 +1494,6 @@
     "flag_index": 257,
     "item_id": 38,
     "amount": 1
-  },
-  {
-    "name": "Culture Experiment Room - Machinegun Bullets",
-    "file": "ROOM60F0.RDT",
-    "stage": 5,
-    "room": 15,
-    "aot_id": 2,
-    "global_id": 30,
-    "flag_index": 286,
-    "item_id": 27,
-    "amount": 100,
-    "alternate_items": [
-      [
-        15,
-        100
-      ]
-    ]
   },
   {
     "name": "Active Treatment Experimentation Room - Magnum Rounds",
