@@ -19,6 +19,8 @@ LOCATION_NAME_TO_ID = {
 
 EASTER_EGG_LOCATIONS = {"S.T.A.R.S. Office - Film D"}
 
+POINT_OF_NO_RETURN_REGIONS = {"City"}
+
 
 class RE2Location(Location):
     game = "Resident Evil 2"
@@ -33,7 +35,7 @@ def create_all_locations(world: RE2World) -> None:
         region = world.get_region(location_region(location))
         region.add_locations({location["name"]: LOCATION_NAME_TO_ID[location["name"]]}, RE2Location)
 
-        if location["name"] in EASTER_EGG_LOCATIONS:
+        if location["name"] in EASTER_EGG_LOCATIONS or location_region(location) in POINT_OF_NO_RETURN_REGIONS:
             world.get_location(location["name"]).progress_type = LocationProgressType.EXCLUDED
 
     for location_name, (region_name, item_name) in EVENTS.items():

@@ -1221,6 +1221,17 @@
     "amount": 15
   },
   {
+    "name": "Dumping Area - First Aid Spray",
+    "file": "ROOM4100.RDT",
+    "stage": 3,
+    "room": 16,
+    "aot_id": 6,
+    "global_id": 180,
+    "flag_index": 180,
+    "item_id": 35,
+    "amount": 1
+  },
+  {
     "name": "Dumping Area - Ink Ribbon",
     "file": "ROOM4100.RDT",
     "stage": 3,

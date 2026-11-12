@@ -56,6 +56,7 @@ REVIEW_DECISIONS = {
     ("ROOM40E0.RDT", 7):  (0x15, 7, 202),
     ("ROOM40E0.RDT", 8):  (0x14, 15, 203),
     ("ROOM4100.RDT", 4):  None,
+    ("ROOM4100.RDT", 6):  (0x23, 1, 180),
     ("ROOM5060.RDT", 2):  None,
     ("ROOM5070.RDT", 4):  (0x15, 7, 76),
     ("ROOM6030.RDT", 13): None,
