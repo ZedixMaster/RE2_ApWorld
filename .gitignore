@@ -1,2 +1,4 @@
 RE2Plan.pdf
 __pycache__/
+tools/research/ram_log_*.txt
+SaveStatesTest/
