@@ -58,7 +58,7 @@ class TestKeyDoors(RE2TestBase):
 class TestMultiItemLocks(RE2TestBase):
     def test_every_plug_is_needed(self):
         for plug in PLUGS:
-            with self.subTest(plug=plug):
+            with self.subTest(plug = plug):
                 state = self.state_without(plug)
                 self.assertFalse(state.can_reach_region("Sewers", self.player))
 
@@ -78,8 +78,20 @@ class TestMultiItemLocks(RE2TestBase):
 
     def test_every_medal_is_needed(self):
         for medal in MEDALS:
-            with self.subTest(medal=medal):
+            with self.subTest(medal = medal):
                 self.assertFalse(self.state_without(medal).can_reach_region("Factory", self.player))
+
+    def test_small_key_desks_need_both_keys(self):
+        for desk in ("Lounge - Handgun Parts", "Waiting Room 1F - Handgun Bullets"):
+            with self.subTest(desk = desk):
+                state = self.state_without("Small Key")
+                first_key, second_key = self.get_items_by_name("Small Key")
+
+                state.collect(first_key)
+                self.assertFalse(state.can_reach_location(desk, self.player))
+
+                state.collect(second_key)
+                self.assertTrue(state.can_reach_location(desk, self.player))
 
 
 class TestGoal(RE2TestBase):

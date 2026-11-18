@@ -14,12 +14,13 @@ if TYPE_CHECKING:
 # Puzzle rewards whose pickup only appears once the puzzle is solved, in rooms that are otherwise open.
 # Entrance requirements live in regions.CONNECTIONS.
 LOCATION_RULES = {
-    "Main Hall - Spade Key":         {"Unicorn Medal": 1},
-    "Storage Room - King Plug":      {"Red Jewel": 2},
-    "Cog Room - Jaguar Stone (R)":   {"Crank": 1, "Cog": 1},  # Knight Plug per both walkthroughs
-    "Lounge - Handgun Parts":        {"Small Key": 1},
-    "Cold Room - Main Fuse":         {"Fuse Case": 1},
-    "P-4 Laboratory - Magnum Parts": {"Weapon Storage Key": 1},
+    "Main Hall - Spade Key":             {"Unicorn Medal": 1},
+    "Storage Room - King Plug":          {"Red Jewel": 2},
+    "Cog Room - Jaguar Stone (R)":       {"Crank": 1, "Cog": 1},  # Knight Plug per both walkthroughs
+    "Lounge - Handgun Parts":            {"Small Key": 2},
+    "Waiting Room 1F - Handgun Bullets": {"Small Key": 2},
+    "Cold Room - Main Fuse":             {"Fuse Case": 1},
+    "P-4 Laboratory - Magnum Parts":     {"Weapon Storage Key": 1},
 }
 
 
