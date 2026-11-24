@@ -16,3 +16,6 @@ class TestLocationSetup(RE2TestBase):
             with self.subTest(location = location_name):
                 location = self.multiworld.get_location(location_name, self.player)
                 self.assertEqual(location.progress_type, LocationProgressType.EXCLUDED)
+
+    def test_one_club_key_in_pool(self):
+        self.assertEqual(len(self.get_items_by_name("Club Key x3")), 1)

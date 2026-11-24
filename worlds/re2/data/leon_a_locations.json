@@ -979,17 +979,6 @@
     "amount": 1
   },
   {
-    "name": "Cesspool - Club Key",
-    "file": "ROOM3060.RDT",
-    "stage": 2,
-    "room": 6,
-    "aot_id": 2,
-    "global_id": 119,
-    "flag_index": 119,
-    "item_id": 92,
-    "amount": 3
-  },
-  {
     "name": "Construction Area / Construction Storage - Shotgun Shells",
     "file": "ROOM3070.RDT",
     "stage": 2,
@@ -1010,17 +999,6 @@
     "flag_index": 124,
     "item_id": 92,
     "amount": 3
-  },
-  {
-    "name": "Septic Pool Entrance - Shotgun Shells",
-    "file": "ROOM30B0.RDT",
-    "stage": 2,
-    "room": 11,
-    "aot_id": 5,
-    "global_id": 193,
-    "flag_index": 193,
-    "item_id": 21,
-    "amount": 7
   },
   {
     "name": "Storeroom West - Ink Ribbon",

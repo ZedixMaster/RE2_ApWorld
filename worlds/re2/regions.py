@@ -134,8 +134,7 @@ EVENTS = {
 # Locations that belong to a different region than their room.
 LOCATION_REGIONS = {
     # Leon's hand-off copies of Ada's pickups only appear after her section
-    "Septic Pool Entrance - Club Key":       "Ada Sewage Disposal",
-    "Septic Pool Entrance - Shotgun Shells": "Ada Sewage Disposal",
+    "Septic Pool Entrance - Club Key":       "Ada Sewage Disposal"
 }
 
 
