@@ -43,6 +43,14 @@ LIGHTER_ID           = 0x2F
 
 VANILLA_PICKUPS = {location["flag_index"]: location for location in LEON_A_LOCATIONS}
 
+TURNTABLE_FLAG_ADDRESS = 0x0CC98F
+TURNTABLE_ACTIVE_BIT   = 0x10
+BOSS_FLAG_ADDRESS      = 0x0CC9C9
+BOSS_BEATEN_BIT        = 0x01
+
+FACTORY_TURNTABLE_YARD = (4, 0x04)
+LAB_ELEVATOR_AREA      = (5, 0x06)
+
 
 def flag_is_set(flags: bytes, index: int) -> bool:
     start = (index // 32) * 4
@@ -121,7 +129,7 @@ class RE2Client(BizHawkClient):
         if ctx.server is None or ctx.server.socket.closed or ctx.slot_data is None:
             return
 
-        system_flags, scenario_flags, pickup_flags, inventory, stage_and_room, lighter_slot = await bizhawk.read(
+        (system_flags, scenario_flags, pickup_flags, inventory, stage_and_room, lighter_slot, turntable_flags, boss_flags) = await bizhawk.read(
             ctx.bizhawk_ctx, [
                 (SYSTEM_FLAGS_ADDRESS, 4, MAIN_RAM),
                 (SCENARIO_FLAGS_ADDRESS, 4, MAIN_RAM),
@@ -129,6 +137,8 @@ class RE2Client(BizHawkClient):
                 (INVENTORY_ADDRESS, INVENTORY_SLOTS * RECORD_SIZE, MAIN_RAM),
                 (STAGE_AND_ROOM_ADDRESS, 4, MAIN_RAM),
                 (LIGHTER_SLOT_ADDRESS, 1, MAIN_RAM),
+                (TURNTABLE_FLAG_ADDRESS, 1, MAIN_RAM),
+                (BOSS_FLAG_ADDRESS, 1, MAIN_RAM),
             ],
         )
         current_room = (stage_and_room[0], stage_and_room[2])
@@ -139,6 +149,8 @@ class RE2Client(BizHawkClient):
             self.previous_inventory = None
             self.previous_room = None
             return
+
+        await self.keep_turntable_two_way(ctx, current_room, turntable_flags, boss_flags)
 
         await self.remove_vanilla_items(ctx, pickup_flags, inventory, current_room)
         self.previous_pickup_flags = pickup_flags
@@ -216,4 +228,22 @@ class RE2Client(BizHawkClient):
                 ctx.bizhawk_ctx,
                 [(slot_address, slot_record(self.previous_inventory, slot), MAIN_RAM)],
                 [(slot_address, slot_record(inventory, slot), MAIN_RAM)],
+            )
+
+    async def keep_turntable_two_way(self, ctx: BizHawkClientContext, current_room: tuple[int, int], turntable_flags: bytes, boss_flags: bytes) -> None:
+        if not boss_flags[0] & BOSS_BEATEN_BIT:
+            return
+
+        if current_room == FACTORY_TURNTABLE_YARD:
+            wanted = turntable_flags[0] | TURNTABLE_ACTIVE_BIT
+        elif current_room == LAB_ELEVATOR_AREA:
+            wanted = turntable_flags[0] & ~TURNTABLE_ACTIVE_BIT
+        else:
+            return
+
+        if wanted != turntable_flags[0]:
+            await bizhawk.guarded_write(
+                ctx.bizhawk_ctx,
+                [(TURNTABLE_FLAG_ADDRESS, [wanted], MAIN_RAM)],
+                [(TURNTABLE_FLAG_ADDRESS, turntable_flags, MAIN_RAM)],
             )

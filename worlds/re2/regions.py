@@ -114,7 +114,7 @@ CONNECTIONS = [
     ("Sewage Disposal",     "Sewers",                 ("Bishop Plug", "Rook Plug", "King Plug", "Jaguar Stone (R)")),
     ("Sewers",              "Sewers Water Pool Side", ("Valve Handle",)),
     ("Sewers",              "Factory",                ("Eagle Medal", "Wolf Medal")),
-    ("Factory",             "Laboratory",             ("Down Key",)),  # point of no return
+    ("Factory",             "Laboratory",             ("Down Key",)),
     ("Laboratory",          "Laboratory B5",          ("Main Fuse",)),
     ("Laboratory B5",       "Computer Room",          ("Umbrella Key Card x2",)),
     ("Laboratory",          "Active Treatment Room",  ("Umbrella Key Card x2", "Computer Room Login")),

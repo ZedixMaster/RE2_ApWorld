@@ -105,7 +105,6 @@ class TestGoal(RE2TestBase):
 
 
 class TestTurntable(RE2TestBase):
-    def test_lab_refuses_pre_turntable_keys(self):
+    def test_lab_accepts_pre_turntable_keys(self):
         location = self.multiworld.get_location("Security Room - Shotgun Shells", self.player)
-        self.assertFalse(location.item_rule(self.get_item_by_name("Valve Handle")))
-        self.assertTrue(location.item_rule(self.get_item_by_name("Main Fuse")))
+        self.assertTrue(location.item_rule(self.get_item_by_name("Valve Handle")))
