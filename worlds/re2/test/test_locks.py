@@ -5,7 +5,7 @@ AFTER_PLUG_PANEL = ("Sewers", "Sewers Water Pool Side", "Factory", "Laboratory",
 
 AFTER_BASEMENT = ("Sewage Disposal", "Ada Sewage Disposal", *AFTER_PLUG_PANEL)
 
-PLUGS = ("Bishop Plug", "Rook Plug", "King Plug", "Jaguar Stone (R)")
+PLUGS = ("Bishop Plug", "Rook Plug", "King Plug", "Knight Plug")
 
 MEDALS = ("Eagle Medal", "Wolf Medal")
 

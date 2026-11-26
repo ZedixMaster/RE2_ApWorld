@@ -110,8 +110,7 @@ CONNECTIONS = [
     ("RPD Basement",        "Arms Storage",           ("Red Card Key",)),
     ("RPD Basement",        "Sewage Disposal",        ("Manhole Opener",)),
     ("Sewage Disposal",     "Ada Sewage Disposal",    ()),
-    # The Cog Room item reads 0x39 on the disc; both walkthroughs call it the Knight Plug. Rename after the in-game test.
-    ("Sewage Disposal",     "Sewers",                 ("Bishop Plug", "Rook Plug", "King Plug", "Jaguar Stone (R)")),
+    ("Sewage Disposal",     "Sewers",                 ("Bishop Plug", "Rook Plug", "King Plug", "Knight Plug")),
     ("Sewers",              "Sewers Water Pool Side", ("Valve Handle",)),
     ("Sewers",              "Factory",                ("Eagle Medal", "Wolf Medal")),
     ("Factory",             "Laboratory",             ("Down Key",)),

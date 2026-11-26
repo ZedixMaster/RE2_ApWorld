@@ -44,6 +44,7 @@ LATE_STAGE_OFFSET = 256
 
 REVIEW_DECISIONS = {
     ("ROOM10D0.RDT", 10): (0x16, 8, 206),
+    ("ROOM1110.RDT", 2):  (0x3D, 1, 55),
     ("ROOM1150.RDT", 7):  None,
     ("ROOM2080.RDT", 14): None,
     ("ROOM20C0.RDT", 10): None,

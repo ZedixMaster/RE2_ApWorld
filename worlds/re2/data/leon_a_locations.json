@@ -209,14 +209,14 @@
     "amount": 1
   },
   {
-    "name": "Cog Room - Jaguar Stone (R)",
+    "name": "Cog Room - Knight Plug",
     "file": "ROOM1110.RDT",
     "stage": 0,
     "room": 17,
     "aot_id": 2,
     "global_id": 55,
     "flag_index": 55,
-    "item_id": 57,
+    "item_id": 61,
     "amount": 1
   },
   {

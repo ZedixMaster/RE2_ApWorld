@@ -12,7 +12,7 @@ if TYPE_CHECKING:
 LOCATION_RULES = {
     "Main Hall - Spade Key":             {"Unicorn Medal": 1},
     "Storage Room - King Plug":          {"Red Jewel": 2},
-    "Cog Room - Jaguar Stone (R)":       {"Crank": 1, "Cog": 1},  # Knight Plug per both walkthroughs
+    "Cog Room - Knight Plug":            {"Crank": 1, "Cog": 1},
     "Lounge - Handgun Parts":            {"Small Key": 2},
     "Waiting Room 1F - Handgun Bullets": {"Small Key": 2},
     "Cold Room - Main Fuse":             {"Fuse Case": 1},
